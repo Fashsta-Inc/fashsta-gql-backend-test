@@ -47,7 +47,7 @@ const resolvers = {
 
 const server = new ApolloServer({ typeDefs, resolvers });
 
-server.listen(27001).then(() => {
+server.listen(process.env.PORT || 27001).then(() => {
     console.log('server started successfully n port 27001')
 })
 
